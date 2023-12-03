@@ -13,6 +13,7 @@ npm config get registry
 
 ```shell
 npm i -g n #安装n
+# 如果提示Unsupported platform for n@9.2.0: wanted {"os":"!win32"} (current: {"os":"win32","arch":"x64"})，就使用 npm i -g n --force
 
 export N_NODE_MIRROR=https://npm.taobao.org/mirrors/node #给n换源
 
