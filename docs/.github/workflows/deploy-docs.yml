@@ -28,4 +28,4 @@ jobs:
           folder: docs/.vuepress/dist
           token: ${{ secrets.TITLE }}
           repository-name: baixiaolu/baixiaolu.github.io
-          build-script-name: docs:build
+          run: npm run docs:build
