@@ -46,4 +46,4 @@ jobs:
           branch: gh-pages
           folder: docs/.vuepress/dist
           token: $ secrets.TITLE }}
-          repository-name: baixiaolu/baixiaolu.githubio
+          repository-name: baixiaolu/baixiaolu.github.io
