@@ -20,6 +20,11 @@ jobs:
           # 如果你文档需要 Git 子块，取消注释下一行
           # submodules: true
 
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm ci
+          npm run docs:build
+
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
         with:
@@ -28,4 +33,3 @@ jobs:
           folder: docs/.vuepress/dist
           token: ${{ secrets.TITLE }}
           repository-name: baixiaolu/baixiaolu.github.io
-          run: npm run docs:build
