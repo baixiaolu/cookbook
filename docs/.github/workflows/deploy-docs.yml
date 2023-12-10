@@ -1,34 +1,51 @@
-name: 部署文档
+name: docs
 
 on:
+  # 每当 push 到 main 分支时触发部署
   push:
-    branches:
-      # 确保这是你正在使用的分支名称
-      - main
-
-permissions:
-  contents: write
+    branches: [main]
+  # 手动触发部署
+  workflow_dispatch:
 
 jobs:
-  deploy-gh-pages:
+  docs:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 
-          # 如果你文档需要 Git 子块，取消注释下一行
-          # submodules: true
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm ci
-          npm run docs:build
-
-      - name: 部署文档
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          # 这是文档部署到的分支名称
-          BRANCH: gh-pages
-          FOLDER: docs/.vuepress/dist
-          ACCESS_TOKEN: ${{ secrets.TITLE }}
+          # 选择要使用的 pnpm 版本
+          version: 8
+          # 使用 pnpm 安装依赖
+          run_install: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # 选择要使用的 node 版本
+          node-version: 18
+          # 缓存 pnpm 依赖
+          cache: pnpm
+
+      # 运行构建脚本
+      - name: Build VuePress site
+        run: pnpm docs:build
+
+      # 查看 workflow 的文档来获取更多信息
+      # @see https://github.com/crazy-max/ghaction-github-pages
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          # 部署到 gh-pages 分支
+          target_branch: gh-pages
+          # 部署目录为 VuePress 的默认输出目录
+          build_dir: docs/.vuepress/dist
+        env:
+          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          GITHUB_TOKEN: ${{ secrets.TITLE }}
