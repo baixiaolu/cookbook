@@ -1,4 +1,5 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
     lang: 'zh-CN',
@@ -161,4 +162,10 @@ export default defineUserConfig({
             ['/page-b', 'Explicit link text']
         ]
     }),
+
+    plugins: [
+        searchPlugin({
+            // 配置项
+        }),
+    ],
 })
