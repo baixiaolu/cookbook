@@ -32,3 +32,5 @@ AI时代，程序员将成为超级个体。
 3. [NodeJS](./nodejs/README.md)
 4. [LangChain](./langchain/README.md)
 5. [VuePress](./vuepress/README.md)
+6. [MySQL](./mysql/README.md)
+7. [MongoDB](./mongodb/README.md)
