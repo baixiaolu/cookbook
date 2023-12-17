@@ -130,27 +130,21 @@ export default defineUserConfig({
             {
                 text: '基础编程', children: [
                     {
-                        text: 'Git', children: [
-                            { text: '初始', link: '/git', },
-                            { text: '日常', link: '/git', },
-                            { text: '进阶', link: '/git', },
-                            { text: '解决方案', link: '/git', },
+                        text: '工具', children: [
+                            { text: 'Git', link: '/git', },
+                            { text: 'VSCode', link: '/vscode', },
                         ]
                     },
                     {
-                        text: 'Python', children: [
-                            { text: '初始', link: '/python', },
-                            { text: '进阶', link: '/python', },
-                            { text: '玩法', link: '/python', },
-                            { text: '更大世界', link: '/python', },
+                        text: '语言环境', children: [
+                            { text: 'NodeJS', link: '/nodejs', },
+                            { text: 'Python', link: '/python', },
                         ]
                     },
                     {
-                        text: 'NodeJS', children: [
-                            { text: '初始', link: '/nodejs', },
-                            { text: '进阶', link: '/nodejs', },
-                            { text: '常见问题', link: '/nodejs', },
-                            { text: '探索吧', link: '/nodejs', },
+                        text: '数据库', children: [
+                            { text: 'MySQL', link: '/mysql/', },
+                            { text: 'MongoDB', link: '/mongodb/', },
                         ]
                     },
                 ]
