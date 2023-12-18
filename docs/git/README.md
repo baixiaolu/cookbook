@@ -14,6 +14,7 @@ git config --global user.email "邮箱地址"
 ```shell
 ssh-keygen -t rsa -C '邮箱地址'
 ```
+[使用快10倍的Ed25519算法](./ssh-keygen-ed25519.md)
 
 ## windows关闭CRLF换行符警告
 
