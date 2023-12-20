@@ -28,6 +28,7 @@ AI时代，程序员将成为超级个体。
 ## 技术系列
 
 1. [Git](./git/README.md)
+1. [Markdown](./markdown/README.md)
 2. [Java](./java/README.md)
 2. [Python](./python/README.md)
 3. [NodeJS](./nodejs/README.md)
