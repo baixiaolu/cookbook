@@ -137,6 +137,7 @@ export default defineUserConfig({
                     },
                     {
                         text: '语言环境', children: [
+                            { text: 'Java', link: '/java', },
                             { text: 'NodeJS', link: '/nodejs', },
                             { text: 'Python', link: '/python', },
                         ]
