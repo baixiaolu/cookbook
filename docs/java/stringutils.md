@@ -149,9 +149,10 @@ StringUtils.stripToNull("     \n\tss   \b") = "ss   \b"
 StringUtils.stripToNull(" d   d dd     ") = "d   d dd"
 StringUtils.stripToNull("dd     ") = "dd"
 StringUtils.stripToNull("     dd       ") = "dd"
-```java
+```
 
-以下方法只介绍其功能，不再举例：
+以下方法只介绍其功能，不再举例：  
+
 11. public static String strip(String str, String stripChars) 
    去掉 str 两端的在 stripChars 中的字符。
    如果 str 为 null 或等于"" ，则返回它本身；
