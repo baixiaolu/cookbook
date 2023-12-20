@@ -133,6 +133,7 @@ export default defineUserConfig({
                         text: '工具', children: [
                             { text: 'Git', link: '/git', },
                             { text: 'Markdown', link: '/markdown', },
+                            { text: 'Mac', link: '/mac', },
                             { text: 'VSCode', link: '/vscode', },
                         ]
                     },
