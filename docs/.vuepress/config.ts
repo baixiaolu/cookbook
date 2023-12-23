@@ -100,8 +100,10 @@ export default defineUserConfig({
                 text: '项目应用', children: [
                     {
                         text: '稠云OA', children: [
-                            { text: '基本思想', link: '/cyoa', },
-                            { text: '学习灵魂', link: '/cyoa', },
+                            { text: '基本', link: '/cyoa', },
+                            { text: '外包标准', link: '/cyoa/standard', },
+                            { text: 'swagger', link: '/cyoa/swagger', },
+                            { text: 'vue-proxy', link: '/cyoa/vue-proxy', },
                         ]
                     },
                     {
