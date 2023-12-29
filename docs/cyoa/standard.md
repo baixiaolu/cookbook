@@ -7,11 +7,13 @@
 3. 表名和字段名不要使用数据库保留字，比如`user`、`group`、`order`等
 4. 每个表必备以下字段：
 ```sql
-	id int auto_increment comment '表id',
-	carrier_id varchar(50) comment 'xx表uuid',
-	org_id varchar(50) default '8EADB678-A646-1E51-3E87-75A547B8AF19',
-	create_time timestamp default CURRENT_TIMESTAMP,
-	update_time timestamp on update CURRENT_TIMESTAMP,
+	`id` int NOT NULL AUTO_INCREMENT COMMENT '表自增id',
+	`xx_id` varchar(50) NULL COMMENT '表uuid', --如果表名为ici_park_info，则xx为park_info，本字段名为park_info_id
+	-- 其它字段
+	`org_id` varchar(50) NULL DEFAULT '8EADB678-A646-1E51-3E87-75A547B8AF19',
+	`create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_time` timestamp NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '最近更新时间',
+	PRIMARY KEY (`id`)
 ```
 
 ## 2. 代码约定及说明
