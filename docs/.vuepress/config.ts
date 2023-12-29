@@ -138,6 +138,7 @@ export default defineUserConfig({
                             { text: 'Mac', link: '/mac', },
                             { text: 'VSCode', link: '/vscode', },
                             { text: 'TemperMonkey', link: '/tempermonkey', },
+                            { text: 'gitignore', link: '/gitignore', },
                         ]
                     },
                     {
