@@ -137,6 +137,7 @@ export default defineUserConfig({
                             { text: 'Markdown', link: '/markdown', },
                             { text: 'Mac', link: '/mac', },
                             { text: 'VSCode', link: '/vscode', },
+                            { text: 'TemperMonkey', link: '/tempermonkey', },
                         ]
                     },
                     {
