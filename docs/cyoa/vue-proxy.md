@@ -44,6 +44,11 @@ location ^~/api/ {
  }
 ```
 
+最后重载nginx生效：
+```bash
+nginx -s reload
+```
+
 参考资料：
 [Vue项目打包部署上线时devServer.proxy代理失效如何解决？使用nginx的proxy_pass 代理跨域转发](https://blog.csdn.net/qq_45890970/article/details/123654674)  
 
