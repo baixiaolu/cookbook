@@ -39,5 +39,5 @@ git config --global core.filemode false
 
 ## 更多
 
-[gitignore](gitignore.md)
-[使用 Ed25519 算法生成你的 SSH 密钥](ssh-keygen-ed25519.md)
+- [gitignore](gitignore.md)
+- [使用 Ed25519 算法生成你的 SSH 密钥](ssh-keygen-ed25519.md)
