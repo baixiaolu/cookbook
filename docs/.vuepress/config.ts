@@ -136,6 +136,7 @@ export default defineUserConfig({
                             { text: 'Git', link: '/git', },
                             { text: 'Markdown', link: '/markdown', },
                             { text: 'Mac', link: '/mac', },
+                            { text: '树莓派', link: '/respberrypi', },
                             { text: 'VSCode', link: '/vscode', },
                             { text: 'TemperMonkey', link: '/tempermonkey', },
                         ]

@@ -41,3 +41,4 @@ AI时代，程序员将成为超级个体。
 7. [外包标准](./cyoa/standard.md)
 7. [VSCode](./vscode/standard.md)
 7. [TemperMonkey](./tempermonkey/README.md)
+7. [树莓派](./respberrypi/README.md)
